@@ -1,3 +1,16 @@
 *{
   box-sizing: border-box;
+  color:#344054
+}
+.bgimg{
+  background-image: url('/public/Maskgroup.png');
+  height: 100px;
+  width: 80%;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }

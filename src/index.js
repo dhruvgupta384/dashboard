@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { myContext } from './Context/Createcontext';
+import Createcontext from './Context/Createcontext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Createcontext>
     <App />
+    </Createcontext>
   </React.StrictMode>
 );
 
