@@ -7,6 +7,8 @@ import { useState,useEffect } from 'react';
 import Accordian from './Components/Accordian';
 import { useContext } from 'react';
 import { myContext } from './Context/Createcontext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [data, setdata] = useState();
   const [showdata, setshowdata] = useState(-1);
@@ -21,7 +23,7 @@ function App() {
     // Object.keys(oldobj).forEach((val,indx)=>{
       
     // })
-    Object.keys(newobj).map((val)=>{
+    newobj&&Object.keys(newobj).map((val)=>{
       Object.keys(oldobj).forEach((value,indx)=>{
         // console.log("ew ",oldobj[value].label,val)
         if(oldobj[value].label == val)
@@ -32,6 +34,7 @@ function App() {
        
     })
     })
+    toast("Saved successfully Please see console")
     console.log(oldobj)
   }
   
@@ -179,6 +182,7 @@ function App() {
         </button>
      
     </div>
+    <ToastContainer />
     </div>
   );
 }
